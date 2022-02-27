@@ -34,6 +34,12 @@ int main()
 	mat4.at<float>(Point(1, 2)) = 4;
 	cout << "mat4 : " << endl
 		<< mat4 << endl;
+
+
+	Mat mat(Size(3, 3), CV_8U, Scalar(0));
+	mat.at<uchar>(1, 1) = 4;
+	cout << "(1, 1) : " << static_cast<double>(mat.at<uchar>(1, 1)) << endl; // 특정 요소 프린트.
+
 	
 	// 3.
 	Mat mat5(3, 3, CV_64FC3, Scalar(0));
