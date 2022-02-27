@@ -44,8 +44,8 @@ typedef Vec<double, 6> Vec6d;
 /* Scalar_ 클래스 : 4-element vecotr
 
 1. The type Scalar is widely used in OpenCV to pass pixel values.
-
-
+2. 템플릿 인자로 타입을 받는다.
+3. Scalar 는 Scalar_<double>이 typedef된 것이다.
 */
 
 
@@ -59,15 +59,24 @@ int main()
 	// 2.
 	Vec3b rgb(2, 5, 10); // Vec<uchar, 3>
 
-	//3.
+	// 3.
 	Vec3b rgb2(11, 5, 11);
 	Vec3b rgb_mul = rgb.mul(rgb2); // 각 요소를 곱한다.
 	Vec3b rgb_ae = rgb * 5; // 모든 요소에 5 곱한다.
 
 	cout << "rgb : " << rgb << endl
-		<< "sum : " << sum(rgb) << endl;
+		<< "sum : " << sum(rgb) << endl; // 요소의 합. 결과는 Scalar_ 클래스로 반환된다.
 
 	Vec3b vec_all = Vec3b::all(0);
 
+	// Scalar 클래스.
+	// 1.
+	Scalar_<int> scalar1(255, 0, 0, 0);
+	
+	cout << scalar1 << endl;
+
+	// 2.
+	Scalar scalar2 = Vec4d(1, 2, 3, 4); // 기본 벡터.
+	
 	
 }
