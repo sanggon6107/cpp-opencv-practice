@@ -11,6 +11,13 @@ using namespace cv;
 int main()
 {
 	Mat mat(Size(3, 3), CV_8U, Scalar(0));
-	mat.at<uchar>(1, 1) = 4;
-	cout << "(1, 1) : " << static_cast<double>(mat.at<uchar>(1, 1))<< endl;
+
+	cout << "mat[0:1, 0:3] : " << endl
+		<< mat(Range(0, 1), Range(0, 3)) << endl;
+
+	cout << "mat[all, 0:2] : " << endl
+		<< mat(Range::all(), Range(0, 2)) << endl;
+
+	cout << "mat[0:2, 0:1] : " << endl
+		<< mat(Rect(0, 0, 1, 2)) << endl;
 }
