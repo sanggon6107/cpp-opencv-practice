@@ -21,6 +21,8 @@ Mat& operator= (const Scalar& s);
 Mat& setTo(InputArray value, InputArray mast = noArray());
 8.
 Mat reshape(int cn, int rows = 0) const;
+9. 
+mat1 > 4;
 */
 
 
@@ -104,5 +106,11 @@ int main()
 	mat11 = mat10.reshape(3, 3);
 	cout << "mat11 : " << endl
 		<< mat11 << endl;
+
+	// 9. 숫자와 비교 연산은 true/false 반환한다. (255이거나 0)
+	Mat mat12(Matx33f(1, 2, 3, 4, 5, 6, 7, 8, 9));
+	Mat mat13 = mat12 > 4;
+	cout << "mat13 : " << endl
+		<< mat13 << endl;
 	
 }
