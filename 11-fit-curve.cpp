@@ -18,4 +18,4 @@ int main()
 	Mat fit = X.inv(DECOMP_SVD) * Y; // x계수, 상수. y = fit[0]*x + fit[1]
 
 	cout << fit << endl;
-}
+}	
