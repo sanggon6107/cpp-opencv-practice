@@ -25,7 +25,7 @@ int main()
 	Mat img = imread("sky.jpg", IMREAD_GRAYSCALE);
 	
 	Mat dst_img;
-	adaptiveThreshold(img, dst_img, 255, ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY, 21, 5); // Æò±Õ°ª¿¡¼­ 5 ³ª´®.
+	adaptiveThreshold(img, dst_img, 255, ADAPTIVE_THRESH_MEAN_C, THRESH_BINARY, 21, 5); // Æò±Õ°ª¿¡¼­ 5 »­.
 
 	Mat dst_img2;
 	adaptiveThreshold(img, dst_img2, 255, ADAPTIVE_THRESH_GAUSSIAN_C, THRESH_BINARY, 21, 5);
